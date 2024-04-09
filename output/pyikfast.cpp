@@ -16,16 +16,16 @@ static PyMethodDef PyIkFastMethods[] = {
     {"forward", forward, METH_VARARGS, "Calculate forwards kinematics"},
     {NULL, NULL, 0, NULL}};
 
-static struct PyModuleDef pyikfast_bravo7module = {
+static struct PyModuleDef pyikfast_bravomodule = {
     PyModuleDef_HEAD_INIT,
-    "pyikfast_bravo7",
+    "pyikfast_bravo",
     "ikfast wrapper",
     -1,
     PyIkFastMethods};
 
-PyMODINIT_FUNC PyInit_pyikfast_bravo7(void)
+PyMODINIT_FUNC PyInit_pyikfast_bravo(void)
 {
-  PyObject *module = PyModule_Create(&pyikfast_bravo7module);
+  PyObject *module = PyModule_Create(&pyikfast_bravomodule);
   return module;
 }
 
